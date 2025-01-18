@@ -19,7 +19,7 @@ graalvmNative {
         named("main") {
             imageName.set("stream-api-study")
             mainClass.set("me.hermippus.Main")
-            buildArgs.addAll("-Ob", "--gc=G1", "-march=native")
+            buildArgs.addAll("-Ob", "--gc=G1")
         }
     }
 }
