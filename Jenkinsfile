@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/hermippus/stream-api-study'
+                git branch: 'main', url: 'https://github.com/hermippus/java-stream-api-study'
             }
         }
         stage('Build') {
