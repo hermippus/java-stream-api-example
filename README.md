@@ -1,6 +1,6 @@
 # Java StreamAPI study example
 
-### Tech stack:
+## Tech stack:
 * GraalVM 21
 * Lombok
 * Gradle
