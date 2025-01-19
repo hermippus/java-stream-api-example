@@ -17,7 +17,7 @@ dependencies {
 graalvmNative {
     binaries {
         named("main") {
-            imageName.set("stream-api-study")
+            imageName.set("stream-api")
             mainClass.set("me.hermippus.Main")
             buildArgs.addAll("-Ob", "--gc=G1")
         }
