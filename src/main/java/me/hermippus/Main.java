@@ -13,16 +13,28 @@ public class Main {
         // Immutable list of Human objects
         List<Human> humans = List.of(
                 new Human("John", 16),
+                new Human("John", 16),
                 new Human("Alex", 17),
                 new Human("Mary", 16),
                 new Human("Ada", 17)
         );
 
+        // Intermediate operations follow the principle of the Fluent API
+
         // Use forEach(Consumer<T> action) to print human names
         humans.forEach(h -> System.out.print(h.getName() + " "));
         System.out.println();
 
-        // Use filter(Predicate<T> predicate) and forEach(Consumer<T> action) to print human names that age > 16
+        // use map(Function<? super T, ? extends R>), distinct(), and forEach(Consumer<T> action)
+        // to print people names (excluding duplicates)
+        humans.stream().map(Human::getName).distinct().forEach(h -> System.out.print(h + " "));
+        System.out.println();
+
+        // Use map(Function<? super T, ? extends R>) to print length of people's names
+        humans.stream().map(h -> h.getName().length()).forEach(i -> System.out.print(i + " "));
+        System.out.println();
+
+        // Use filter(Predicate<T> predicate) and forEach(Consumer<T> action) to print people names that age > 16
         humans.stream().filter(h -> h.getAge() > 16).forEach(h -> System.out.print(h.getName() + " "));
         System.out.println();
 
